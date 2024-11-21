@@ -24,6 +24,61 @@ StudyHub
 또한, 스터디룸에서 이야기중인 어려운 주제의 공부를 Q&A 게시판을 통해서 궁금증을 해소 할수 있으며, 스터디에 필요한 물품들을 중고로 사고 팔수 있도록 거래장터가 있습니다.
 ```
 
+## 서드파티 모듈 설치 방법
+- Oracle
+```bash
+docker run -d -p {port}:1521 --name {containerName} truevoly/oracle-12c
+```
+
+- Redis
+```bash
+docker run -d -p 6379:6379 --name {containerName} redis
+```
+
+- Jenkins
+```bash
+docker run --name jenkins-docker -d -p 1111:8080 -p 50000:50000 -v {shareFolder}:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock cjy951213/jenkins-studyhub:latest
+
+*shareFolder안에는 Jenkins BackUp File이 있어야함
+```
+
+## 프로젝트 사용법
+- 프론트
+```bash
+> git clone https://github.com/Gisadan-StudyHub/StudyHub.git
+
+> cd StudyHub
+
+> git checkout front
+
+> cd studyhub
+
+> docker build -t {imageName} .
+
+> docker run -d -e TZ=Asia/Seoul -p {port}:443 --name {containerName} {imageName}
+
+* 주의 프론트 Nginx 서버의 SSL을 점검해야함.
+```
+
+- 백엔드
+```bash
+> git clone https://github.com/Gisadan-StudyHub/StudyHub.git
+
+> cd StudyHub
+
+> git checkout back
+
+> cd studyhub
+
+> ./gradlew build
+
+> docker build -t {imageName} .
+
+>docker run -d -e TZ=Asia/Seoul -p {port}:{server_port} --name {containerName} {imageName}
+
+* 주의 백엔드 서버의 SSL을 점검해야함.
+```
+
 ## 프로젝트 주요기능
 ### 1. 메인 페이지
 - **로그인/비로그인 상태에 따른 스터디 그룹 추천**
@@ -69,8 +124,10 @@ StudyHub
 - **일정 관리**: 스터디 그룹 일정 조회, 삽입, 삭제, 댓글 기능
 - **스터디룸 페이지**: N:M 그룹별 채팅 및 화면 공유 서비스 제공
 
-## 프로젝트 요구사항
+## 프로젝트 요구사항 및 WBS
 [StudyHub SRS 다운로드 링크](기타문서/요구사항%20명세서%20(Requirements%20Specification)_파이널.xlsx)
+
+[StudyHub WBS 다운로드 링크](기타문서/WBS%20양식-StudyHub.xlsx)
 
 ## 배포환경
 <img src="images/프로젝트배포환경.png" width="200" />
@@ -138,7 +195,7 @@ StudyHub
 
 | 스터디 게시판                      |
 |-----------------------------------|
-| ![Image](images/스터디_리스트.png.png) |
+| ![Image](images/스터디_리스트.png) |
 | ![Image](images/스터디_리스트-검색.png) |
 | ![Image](images/스터디_상세보기.png) |
 | ![Image](images/스터디_상세보기2.png) |
