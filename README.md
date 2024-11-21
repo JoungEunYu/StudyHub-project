@@ -130,7 +130,7 @@ docker run --name jenkins-docker -d -p 1111:8080 -p 50000:50000 -v {shareFolder}
 [StudyHub WBS 다운로드 링크](WBS/WBS%20양식-StudyHub.xlsx)
 
 ## 배포환경
-<img src="images/프로젝트배포환경.png" width="200" />
+<img src="images/프로젝트배포환경.png" width="800" />
 
 ## 기술스택
 
