@@ -70,10 +70,10 @@ StudyHub
 - **스터디룸 페이지**: N:M 그룹별 채팅 및 화면 공유 서비스 제공
 
 ## 프로젝트 요구사항
-[StudyHub SRS 다운로드 링크](https://github.com/사용자명/리포지토리명/경로/파일명.xlsx)
+[StudyHub SRS 다운로드 링크](기타문서/요구사항%20명세서%20(Requirements%20Specification)_파이널.xlsx)
 
 ## 배포환경
-<img src="https://example.com/login-screen.png" width="200" />
+<img src="images/프로젝트배포환경.png" width="200" />
 
 ## 기술스택
 
@@ -126,7 +126,7 @@ StudyHub
 |-----------------------------------|
 | ![Image](images/회원가입-1.png) |
 | ![Image](images/회원가입-2.png) |
-| ![Image](images/회원가입-3.png) |
+| ![Image](images/회원가입-3주소.png) |
 | ![Image](images/회원가입-4.png) |
 | ![Image](images/회원가입-5.png) |
 
