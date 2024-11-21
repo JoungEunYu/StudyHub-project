@@ -127,7 +127,7 @@ docker run --name jenkins-docker -d -p 1111:8080 -p 50000:50000 -v {shareFolder}
 ## 프로젝트 요구사항 및 WBS
 [StudyHub SRS 다운로드 링크](기타문서/요구사항%20명세서%20(Requirements%20Specification)_파이널.xlsx)
 
-[StudyHub WBS 다운로드 링크](기타문서/WBS%20양식-StudyHub.xlsx)
+[StudyHub WBS 다운로드 링크](WBS/WBS%20양식-StudyHub.xlsx)
 
 ## 배포환경
 <img src="images/프로젝트배포환경.png" width="200" />
